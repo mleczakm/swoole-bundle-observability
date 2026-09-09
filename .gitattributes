@@ -1,0 +1,15 @@
+# Keep Composer distribution archives limited to runtime and user-facing files.
+# Development, test, and repository metadata remain available in GitHub clones.
+/.github export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/phpstan.neon export-ignore
+/phpunit.xml.dist export-ignore
+/tests export-ignore
+
+# Use consistent line endings for source and package metadata.
+*.php text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.neon text eol=lf
+*.yml text eol=lf
