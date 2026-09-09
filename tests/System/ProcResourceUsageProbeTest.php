@@ -27,7 +27,7 @@ final class ProcResourceUsageProbeTest extends TestCase
 
     public function testCapturesProcMetrics(): void
     {
-        $snapshot = new ProcResourceUsageProbe($this->path)->capture();
+        $snapshot = (new ProcResourceUsageProbe($this->path))->capture();
         self::assertSame(1, $snapshot->processCount);
         self::assertSame(2, $snapshot->totalRssMib());
         self::assertSame(1, $snapshot->totalOpenFds);
